@@ -1,0 +1,120 @@
+
+
+<body>
+  <title> {% block title%}Studnet{%endblock title%} - Computer Class Registation System</title>
+  
+<header class="p-3 text-bg-dark">
+    
+  <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+    
+    
+    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+      <li><a href="/index" class="nav-link px-2 text-white">Home</a></li>
+      <li><a href="/course" class="nav-link px-2 text-secondary">Courses</a></li>
+      <li><a href="/about" class="nav-link px-2 text-white">About</a></li>
+      <li><a href="/faq" class="nav-link px-2 text-white">FAQs</a></li>
+      <li><a href="/contact" class="nav-link px-2 text-white">Contact</a></li>
+    </ul>
+    <div class="text-end">
+      <a href="/admin" class="btn btn-outline-light me-2">Admin</a>
+    </div>
+  </div>
+</div>
+</header>
+
+<!-- Bootstrap CSS -->
+</body>
+
+
+{% block body %}
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0" role="alert">
+  {{ message }}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
+{% endif %}
+<div class="container px-4 py-5" id="hanging-icons">
+    <div class="pb-1">
+    <h2 class="text-center" >Fill The Details</h2>
+    </div>
+<div class="container py-5">
+<form method="post" action="/student">
+  {% csrf_token %}
+  <div class="pb-4">
+    <label for="course">Select an Course:</label>
+    <select id="course" name="Course_Name" class="form-select">
+        <option value="">Select</option>
+        <option value="Web Development">Web Development</option>
+        <option value="Mobile App Development">Mobile App Development</option>
+        <option value="Data Science and ML">Data Science and ML</option>
+        <option value="Cybersecurity">Cybersecurity</option>
+        <option value="Cloud Computing">Cloud Computing</option>
+        <option value="UI/UX Design">UI/UX Design</option>
+        <option value="Database Management">Database Management</option>
+        <option value="Game Development">Game Development</option>
+        <option value="Software Engineering">Software Engineering</option>
+    </select>
+  </div>
+
+  <div class="mb-4">
+    <label for="name" class="form-label">USN</label>
+    <input type="text" class="form-control" id="name" name="usn" placeholder="Enter your Name">
+  </div>
+    <div class="mb-4">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your Name">
+      </div>
+    <div class="mb-4">
+        <label for="email" class="form-label">Email Address</label>
+        <input type="email" class="form-control" id="email", name="email" placeholder="Enter your Email">
+      </div>
+      <div class="mb-4">
+        <label for="phone" class="form-label">Phone No</label>
+        <input type="phone" class="form-control" id="phone", name="Phone" placeholder="Enter your Phone No.">
+      </div>  
+      <div class="mb-4">
+        <label for="date" class="form-label">Date of Birth</label>
+        <input type="date" class="form-control" id="date", name="DOB", max="2008-12-31">
+      </div> 
+      <div class="mb-4">
+        <label for="name" class="form-label">Educational Background</label>
+        <input type="text" class="form-control" id="edu", name="Branch" placeholder="Enter your Educational Background">
+      </div>   
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dropdown with Label</title>
+    </head>
+ 
+        <div class="container px-0 py-3" >
+      </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <div class="container px-0 py-3" >
+    <a href="/course" class="btn btn-primary">
+        Back
+      </a>
+    </div>
+  </form>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+  <title>Your Title Here</title>
+</head>
+<body>
+  <!-- Your HTML code goes here -->
+  
+  <!-- Bootstrap JS (optional) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+{% endblock body %}

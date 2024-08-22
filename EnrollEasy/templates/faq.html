@@ -1,0 +1,50 @@
+<header class="p-3 text-bg-dark">
+    <title> {% block title%}FAQs{%endblock title%} - Computer Class Registation System</title>
+  
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      
+      
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="/index" class="nav-link px-2 text-white">Home</a></li>
+        <li><a href="/course" class="nav-link px-2 text-white">Courses</a></li>
+        <li><a href="/about" class="nav-link px-2 text-white">About</a></li>
+        <li><a href="/faq" class="nav-link px-2 text-secondary">FAQs</a></li>
+        <li><a href="/contact" class="nav-link px-2 text-white">Contact</a></li>
+      </ul>
+      <div class="text-end">
+        <a href="/admin" class="btn btn-outline-light me-2">Admin</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - EnrollEasy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="faq-section">
+        <div class="container px-4 py-5" id="hanging-icons">
+            <div class="mb-5 border-bottom">
+        <h2>Frequently Asked Questions</h2>
+            </div>
+        <div class="faq-item">
+            <h4>1. What courses do you offer?</h4>
+            <p>We offer a wide range of courses covering various computer topics including programming, web development, data science, cybersecurity, and more.</p>
+        </div>
+        <div class="faq-item">
+            <h4>2.How do I enroll in a course?</h4>
+            <p>To enroll in a course, simply visit our Courses page, browse through the available courses, and click on the 'Enroll' button for the course you're interested in.</p>
+        </div>
+        <!-- Add more FAQ items here -->
+    </section>
+</body>
+</html>
+{% endblock body %}

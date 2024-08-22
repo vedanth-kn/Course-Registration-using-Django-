@@ -1,0 +1,55 @@
+<header class="p-3 text-bg-dark">
+    <title> {% block title%}About{%endblock title%} - Computer Class Registation System</title>
+  
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      
+      
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="/index" class="nav-link px-2 text-white">Home</a></li>
+        <li><a href="/course" class="nav-link px-2 text-white">Courses</a></li>
+        <li><a href="/about" class="nav-link px-2 text-secondary">About</a></li>
+        <li><a href="/faq" class="nav-link px-2 text-white">FAQs</a></li>
+        <li><a href="/contact" class="nav-link px-2 text-white">Contact</a></li>
+      </ul>
+      <div class="text-end">
+        <a href="/admin" class="btn btn-outline-light me-2">Admin</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - EnrollEasy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="about-section">
+        <div class="container px-4 py-5" id="hanging-icons">
+        <h2>About EnrollEasy</h2>
+        <p>EnrollEasy is your go-to platform for convenient and accessible computer courses. We are committed to providing high-quality learning experiences tailored to meet the needs of students at every skill level.</p>
+        <p>Our team of experienced instructors is passionate about empowering individuals with the knowledge and skills necessary to succeed in today's digital world.</p>
+        <h3>Our Mission</h3>
+        <p>At EnrollEasy, our mission is to make learning about computers easy, enjoyable, and accessible to everyone. We strive to create a supportive learning environment where students can explore new technologies, enhance their skills, and achieve their goals.</p>
+        <h3>Why Choose Us?</h3>
+        <ul>
+            <li>Wide range of courses covering various computer topics</li>
+            <li>Experienced instructors with industry expertise</li>
+            <li>Flexible learning options to fit your schedule</li>
+            <li>User-friendly registration and learning platform</li>
+            <li>Continuous support and resources for students</li>
+        </ul>
+        <h3>Get in Touch</h3>
+        <p>Have questions or want to learn more about EnrollEasy? Feel free to contact us anytime. We're here to help you on your learning journey!</p>
+        <p>Email: info@enrolleasy.com</p>
+    </section>
+
+</body>
+</html>
+{% endblock body %}
